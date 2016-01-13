@@ -190,14 +190,26 @@ body {
 }
 .card.rank11:before,
 .card.rank11:after {
-  content: "J";
+  content: "11";
 }
 .card.rank12:before,
 .card.rank12:after {
-  content: "Q";
+  content: "12";
 }
 .card.rank13:before,
 .card.rank13:after {
+  content: "13";
+}
+.card.rank14:before,
+.card.rank14:after {
+  content: "J";
+}
+.card.rank15:before,
+.card.rank15:after {
+  content: "Q";
+}
+.card.rank16:before,
+.card.rank16:after {
   content: "K";
 }
 .card.spades.rank1 .face {
@@ -236,8 +248,14 @@ body {
 .card.spades.rank12 .face {
   background-image: url("faces/0_12.svg");
 }
-.card.spades.rank13 .face {
-  background-image: url("faces/0_13.svg");
+.card.spades.rank14 .face {
+  background-image: url("faces/0_14.svg");
+}
+.card.spades.rank15 .face {
+  background-image: url("faces/0_15.svg");
+}
+.card.spades.rank16 .face {
+  background-image: url("faces/0_16.svg");
 }
 .card.hearts.rank1 .face {
   background-image: url("faces/1_1.svg");
@@ -278,6 +296,15 @@ body {
 .card.hearts.rank13 .face {
   background-image: url("faces/1_13.svg");
 }
+.card.hearts.rank14 .face {
+  background-image: url("faces/1_14.svg");
+}
+.card.hearts.rank15 .face {
+  background-image: url("faces/1_15.svg");
+}
+.card.hearts.rank16 .face {
+  background-image: url("faces/1_16.svg");
+}
 .card.clubs.rank1 .face {
   background-image: url("faces/2_1.svg");
 }
@@ -314,8 +341,14 @@ body {
 .card.clubs.rank12 .face {
   background-image: url("faces/2_12.svg");
 }
-.card.clubs.rank13 .face {
-  background-image: url("faces/2_13.svg");
+.card.clubs.rank14 .face {
+  background-image: url("faces/2_14.svg");
+}
+.card.clubs.rank15 .face {
+  background-image: url("faces/2_15.svg");
+}
+.card.clubs.rank16 .face {
+  background-image: url("faces/2_16.svg");
 }
 .card.diamonds.rank1 .face {
   background-image: url("faces/3_1.svg");
@@ -355,6 +388,15 @@ body {
 }
 .card.diamonds.rank13 .face {
   background-image: url("faces/3_13.svg");
+}
+.card.diamonds.rank14 .face {
+  background-image: url("faces/3_14.svg");
+}
+.card.diamonds.rank15 .face {
+  background-image: url("faces/3_15.svg");
+}
+.card.diamonds.rank16 .face {
+  background-image: url("faces/3_16.svg");
 }
 .card.joker.rank1 .face {
   background-image: url("faces/4_1.svg");
