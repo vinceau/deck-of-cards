@@ -157,8 +157,8 @@ var Deck = (function () {
     var transform = prefix('transform');
 
     // calculate rank/suit, etc..
-    var rank = i % 13 + 1;
-    var suit = i / 13 | 0;
+    var rank = i % 16 + 1;
+    var suit = i / 16 | 0;
     var z = (52 - i) / 4;
 
     // create elements
@@ -921,9 +921,9 @@ var Deck = (function () {
     }
   }
 
-  function Deck(jokers) {
+  function Deck(sixplayer) {
     // init cards array
-    var cards = new Array(jokers ? 55 : 52);
+    var cards = new Array(sixplayer ? 63 : 43);
 
     var $el = createElement('div');
     var self = observable({ mount: mount, unmount: unmount, cards: cards, $el: $el });
@@ -944,11 +944,27 @@ var Deck = (function () {
     $el.classList.add('deck');
 
     var card;
+    var counter = 0;
+
+    var exclude;
+
+    if (sixplayer) {
+      exclude = [13, 45];
+    } else {
+      exclude = [2, 3, 4, 11, 12, 13, //spades
+      18, 19, 27, 28, 29, //hearts
+      34, 35, 36, 43, 44, 45, //clubs
+      50, 51, 59, 60, 61 //diamonds
+      ];
+    }
 
     // create cards
-    for (var i = cards.length; i; i--) {
-      card = cards[i - 1] = _card(i - 1);
-      card.mount($el);
+    for (var i = 1; counter < cards.length; i++) {
+      if (exclude.indexOf(i) === -1) {
+        card = cards[counter] = _card(i - 1);
+        card.mount($el);
+        counter++;
+      }
     }
 
     return self;
