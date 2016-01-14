@@ -946,16 +946,14 @@ var Deck = (function () {
     var card;
     var counter = 0;
 
-    var exclude;
+    var exclude = [13, 45];
 
-    if (sixplayer) {
-      exclude = [13, 45];
-    } else {
-      exclude = [2, 3, 4, 11, 12, 13, //spades
+    if (!sixplayer) {
+      exclude.push(2, 3, 4, 11, 12, //spades
       18, 19, 27, 28, 29, //hearts
-      34, 35, 36, 43, 44, 45, //clubs
+      34, 35, 36, 43, 44, //clubs
       50, 51, 59, 60, 61 //diamonds
-      ];
+      );
     }
 
     // create cards
