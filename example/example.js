@@ -21,7 +21,7 @@ $shuffle.textContent = 'Shuffle'
 $sort.textContent = 'Sort'
 $bysuit.textContent = 'By suit'
 $fan.textContent = 'Fan'
-$poker.textContent = 'Poker'
+$poker.textContent = 'Deal'
 $flip.textContent = 'Flip'
 
 $topbar.appendChild($flip)
@@ -175,7 +175,7 @@ $poker.addEventListener('click', function () {
   })
   deck.shuffle()
   deck.shuffle()
-  deck.poker()
+  deck.deal()
 })
 
 deck.mount($container)
